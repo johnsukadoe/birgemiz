@@ -28,7 +28,7 @@
         }
     }
 }
-@media(max-width:1280px){
+@media(max-width:1285px){
     section{
         .the-best{
             .cards:hover{
@@ -36,6 +36,7 @@
                     display: flex;
                     flex-direction: column;
                     top:250px;
+                    width: 300px;
                 } 
             }
             .card-1:hover .tooltip-1{
@@ -66,24 +67,49 @@
         }
     }
 }
-@media(max-width:1280px){
+@media(max-width:1060px){
     section{
         .the-best{
-            .cards{
-                .tooltip-1, .tooltip-2, .tooltip-3{
-                    display: none;
-                    opacity: 0;
-                } 
-            }
             .cards:hover{
                 .tooltip-1, .tooltip-2, .tooltip-3{
-                    display: none;
-                    opacity: 0;
-                }
+                    display: flex;
+                    flex-direction: column;
+                    top:250px;
+                    width: 200px;
+                } 
             }
+            .card-1:hover .tooltip-1{
+                left:190px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+            }
+            .card-2:hover .tooltip-2{
+                left:430px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+            }
+            .card-3:hover .tooltip-3{
+                left: 670px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+            }
+ 
         }
     }
+    section .the-best .the-best-places {
+        gap:30px;
+    }
 }
+
 @media (max-width:1340px) {
     section{
         .mini-grants{
@@ -214,38 +240,102 @@
     html{
         font-size: 14px;
     }
-    section{
-        .the-best{
-            .the-best-places{
-                .cards{
-                    width: 150px;
-                    img{
-                        width: 150px;
-                    }
-                    p{
-                        font-size: 12px;
-                        padding: 10px 0;
-                        line-height: 18px;
-                    }
-                }
-                .card-2{
-                    p{
-                        margin:9px 0;
-                    }
-                }
-            }
+    section .the-best{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        .cards:hover{
             .tooltip-1, .tooltip-2, .tooltip-3{
                 display: none;
-                opacity: 0;
-            }
-            .cards:hover{
-                .tooltip-1, .tooltip-2, .tooltip-3{
-                    display: none;
-                    opacity: 0;
-                }
-            }
-
+                flex-direction: column;
+                top:250px;
+                width: 200px;
+            } 
         }
+        .card-1:hover .tooltip-1{
+            left: 50%;
+            top:25%;
+            transform: translate(-50%, -50%);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        }
+        .card-2:hover .tooltip-2{
+            left: 50%;
+            top:37%;
+            transform: translate(-50%, -50%);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        }
+        .card-3:hover .tooltip-3{
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        }
+        .cards:active{
+            .tooltip-1, .tooltip-2, .tooltip-3{
+                display: flex;
+                flex-direction: column;
+                top:250px;
+                width: 200px;
+            } 
+        }
+        .card-1:active .tooltip-1{
+            left: 50%;
+            top:17%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        }
+        .card-2:active .tooltip-2{
+            left: 50%;
+            top:26%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        }
+        .card-3:active .tooltip-3{
+            left: 50%;
+            top:35%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        }
+        
+    }
+    section .the-best .the-best-places {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-bottom: 60px;
+        gap:50px;
+        .cards{
+            width: 500px;
+            img{
+                width: 400px;
+            }
+        }
+    }
+    section .the-best .the-best-places .cards p {
+        font-size: 16px;
     }
     footer .social-links .location {
         margin-right: 0;
@@ -322,26 +412,7 @@
             }
         }
     }
-    section .the-best{
-        display: grid;
-        justify-content: center;
-        align-items: center;
-    }
-    section .the-best .the-best-places {
-        display: grid;
-        grid-template-columns: 1fr;
-        padding-bottom: 60px;
-        gap:50px;
-        .cards{
-            width: 500px;
-            img{
-                width: 400px;
-            }
-        }
-    }
-    section .the-best .the-best-places .cards p {
-        font-size: 16px;
-    }
+    
     section .team .team-people {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;

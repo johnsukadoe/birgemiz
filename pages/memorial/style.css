@@ -270,7 +270,7 @@ section .city-17 {
   left: calc(50% - 375px);
   border-bottom-left-radius: 19px;
   border-bottom-right-radius: 19px;
-  top: 50%;
+  top: 11%;
   z-index: 1000;
   margin: 0 auto;
   transition: all 1s;
@@ -316,6 +316,7 @@ section .city-17 {
 .complexes-in-city.openPopUp {
   opacity: 1;
   display: block;
+  position: fixed;
 }
 
 footer {

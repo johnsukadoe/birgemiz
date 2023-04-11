@@ -194,8 +194,7 @@ section .the-best .tooltip-1, section .the-best .tooltip-2, section .the-best .t
   box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
   border-radius: 29px;
   background: #804E3B;
-  opacity: 0;
-  display: flex;
+  display: none;
   flex-direction: row;
   -webkit-box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
   -moz-box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
@@ -535,11 +534,12 @@ svg {
     padding-right: 10px;
   }
 }
-@media (max-width: 1280px) {
+@media (max-width: 1285px) {
   section .the-best .cards:hover .tooltip-1, section .the-best .cards:hover .tooltip-2, section .the-best .cards:hover .tooltip-3 {
     display: flex;
     flex-direction: column;
     top: 250px;
+    width: 300px;
   }
   section .the-best .card-1:hover .tooltip-1 {
     left: 100px;
@@ -566,14 +566,39 @@ svg {
     padding: 5px;
   }
 }
-@media (max-width: 1280px) {
-  section .the-best .cards .tooltip-1, section .the-best .cards .tooltip-2, section .the-best .cards .tooltip-3 {
-    display: none;
-    opacity: 0;
-  }
+@media (max-width: 1060px) {
   section .the-best .cards:hover .tooltip-1, section .the-best .cards:hover .tooltip-2, section .the-best .cards:hover .tooltip-3 {
-    display: none;
-    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    top: 250px;
+    width: 200px;
+  }
+  section .the-best .card-1:hover .tooltip-1 {
+    left: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .card-2:hover .tooltip-2 {
+    left: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .card-3:hover .tooltip-3 {
+    left: 670px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .the-best-places {
+    gap: 30px;
   }
 }
 @media (max-width: 1340px) {
@@ -682,27 +707,97 @@ svg {
   html {
     font-size: 14px;
   }
-  section .the-best .the-best-places .cards {
-    width: 150px;
-  }
-  section .the-best .the-best-places .cards img {
-    width: 150px;
-  }
-  section .the-best .the-best-places .cards p {
-    font-size: 12px;
-    padding: 10px 0;
-    line-height: 18px;
-  }
-  section .the-best .the-best-places .card-2 p {
-    margin: 9px 0;
-  }
-  section .the-best .tooltip-1, section .the-best .tooltip-2, section .the-best .tooltip-3 {
-    display: none;
-    opacity: 0;
+  section .the-best {
+    display: grid;
+    justify-content: center;
+    align-items: center;
   }
   section .the-best .cards:hover .tooltip-1, section .the-best .cards:hover .tooltip-2, section .the-best .cards:hover .tooltip-3 {
     display: none;
-    opacity: 0;
+    flex-direction: column;
+    top: 250px;
+    width: 200px;
+  }
+  section .the-best .card-1:hover .tooltip-1 {
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .card-2:hover .tooltip-2 {
+    left: 50%;
+    top: 37%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .card-3:hover .tooltip-3 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .cards:active .tooltip-1, section .the-best .cards:active .tooltip-2, section .the-best .cards:active .tooltip-3 {
+    display: flex;
+    flex-direction: column;
+    top: 250px;
+    width: 200px;
+  }
+  section .the-best .card-1:active .tooltip-1 {
+    left: 50%;
+    top: 17%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .card-2:active .tooltip-2 {
+    left: 50%;
+    top: 26%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .card-3:active .tooltip-3 {
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .the-best-places {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 60px;
+    gap: 50px;
+  }
+  section .the-best .the-best-places .cards {
+    width: 500px;
+  }
+  section .the-best .the-best-places .cards img {
+    width: 400px;
+  }
+  section .the-best .the-best-places .cards p {
+    font-size: 16px;
   }
   footer .social-links .location {
     margin-right: 0;
@@ -767,26 +862,6 @@ svg {
   section .mini-grants .mini-grants-bg .mini-grants-text {
     margin: 0;
     font-size: 13px;
-  }
-  section .the-best {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-  }
-  section .the-best .the-best-places {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding-bottom: 60px;
-    gap: 50px;
-  }
-  section .the-best .the-best-places .cards {
-    width: 500px;
-  }
-  section .the-best .the-best-places .cards img {
-    width: 400px;
-  }
-  section .the-best .the-best-places .cards p {
-    font-size: 16px;
   }
   section .team .team-people {
     display: grid;
