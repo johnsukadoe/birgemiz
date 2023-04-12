@@ -5,7 +5,6 @@ $font-size:18px;
 @import "nullstyle";
 @import "fonts";
 html{
-    overflow-x: hidden;
     font-size: 16px;
     scroll-behavior: smooth;
 }
@@ -238,16 +237,17 @@ section{
             display: flex;
             flex-direction: column;
             background-color: #804E3B;
-            gap:10px;
             border-bottom-left-radius: 19px;
             border-bottom-right-radius: 19px;
-            h2{
+            gap:30px;
+            padding-bottom: 20px;
+            overflow-y: scroll;
                 a{
                     font-family: 'Caesar Dressing';
                     font-style: normal;
                     font-weight: 400;
-                    font-size: 1em;
-                    line-height: 44px;
+                    font-size: 1.4em;
+                    line-height: 20px;
                     color:#fff;
                     text-decoration: none;
                     transition: all 1s;
@@ -255,13 +255,15 @@ section{
                 a:hover{
                     border-bottom: 5px solid #fff;
                 }
-            }
         }
     }
 .complexes-in-city.openPopUp{
     opacity: 1;
     display: block;
     position: fixed;
+    .monuments{
+        overflow-y: scroll;
+    }
 }
 
 footer{

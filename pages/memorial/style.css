@@ -54,7 +54,6 @@ input, button, textarea, select {
   src: url(../../assets/font/caesardressingcyrillic.otf); /* Путь к файлу со шрифтом */
 }
 html {
-  overflow-x: hidden;
   font-size: 16px;
   scroll-behavior: smooth;
 }
@@ -295,21 +294,23 @@ section .city-17 {
   display: flex;
   flex-direction: column;
   background-color: #804E3B;
-  gap: 10px;
   border-bottom-left-radius: 19px;
   border-bottom-right-radius: 19px;
+  gap: 30px;
+  padding-bottom: 20px;
+  overflow-y: scroll;
 }
-.complexes-in-city .monuments h2 a {
+.complexes-in-city .monuments a {
   font-family: "Caesar Dressing";
   font-style: normal;
   font-weight: 400;
-  font-size: 1em;
-  line-height: 44px;
+  font-size: 1.4em;
+  line-height: 20px;
   color: #fff;
   text-decoration: none;
   transition: all 1s;
 }
-.complexes-in-city .monuments h2 a:hover {
+.complexes-in-city .monuments a:hover {
   border-bottom: 5px solid #fff;
 }
 
@@ -317,6 +318,9 @@ section .city-17 {
   opacity: 1;
   display: block;
   position: fixed;
+}
+.complexes-in-city.openPopUp .monuments {
+  overflow-y: scroll;
 }
 
 footer {
