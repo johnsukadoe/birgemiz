@@ -269,7 +269,7 @@ section .city-17 {
   left: calc(50% - 375px);
   border-bottom-left-radius: 19px;
   border-bottom-right-radius: 19px;
-  top: 11%;
+  top: 25%;
   z-index: 1000;
   margin: 0 auto;
   transition: all 1s;
@@ -290,6 +290,7 @@ section .city-17 {
   border-top-right-radius: 19px;
 }
 .complexes-in-city .monuments {
+  height: 250px;
   padding: 15px 30px;
   display: flex;
   flex-direction: column;
@@ -318,6 +319,7 @@ section .city-17 {
   opacity: 1;
   display: block;
   position: fixed;
+  height: 320px;
 }
 .complexes-in-city.openPopUp .monuments {
   overflow-y: scroll;
@@ -453,7 +455,7 @@ footer .partners a img {
   section .complexes-in-city {
     width: 390px;
     left: calc(50% - 195px);
-    top: 50%;
+    top: 40%;
     font-size: 11px;
   }
 }
@@ -471,7 +473,7 @@ footer .partners a img {
   section .complexes-in-city {
     width: 300px;
     left: calc(50% - 150px);
-    top: 50%;
+    top: 35%;
     font-size: 13px;
   }
   section .complexes-in-city .header-of-memorial-complexes {

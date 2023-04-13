@@ -244,5 +244,17 @@ footer{
 
   .accordion-container{
     background: #804E3B;
+    .inner-wrapper{
+        padding: 50px 0;
+        .accordion{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .accordion-content{
+                overflow-y: scroll;
+            }
+        }
+    }
   }
 @import "adaptive";

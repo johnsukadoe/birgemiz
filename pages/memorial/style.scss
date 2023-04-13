@@ -213,7 +213,7 @@ section{
         left: calc(50% - (750px / 2));
         border-bottom-left-radius: 19px;
         border-bottom-right-radius: 19px;
-        top: 11%;
+        top: 25%;
         z-index: 1000;
         margin: 0 auto;
         transition: all 1s;
@@ -233,6 +233,7 @@ section{
             border-top-right-radius: 19px;
         }
         .monuments{
+            height: 250px;
             padding:15px 30px;
             display: flex;
             flex-direction: column;
@@ -261,6 +262,7 @@ section{
     opacity: 1;
     display: block;
     position: fixed;
+    height: 320px;
     .monuments{
         overflow-y: scroll;
     }

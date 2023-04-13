@@ -295,6 +295,18 @@ footer .partners a img {
 .accordion-container {
   background: #804E3B;
 }
+.accordion-container .inner-wrapper {
+  padding: 50px 0;
+}
+.accordion-container .inner-wrapper .accordion {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.accordion-container .inner-wrapper .accordion .accordion-content {
+  overflow-y: scroll;
+}
 
 @media (max-width: 950px) {
   footer .inner-wrapper {
