@@ -1,0 +1,628 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Montserrat:wght@200;300;400;500;700;800;900&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+ul[class], ol[class] {
+  padding: 0;
+}
+
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class], ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: Caeser Cyrillic; /* Гарнитура шрифта */
+  src: url(../../assets/font/caesardressingcyrillic.otf); /* Путь к файлу со шрифтом */
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+.inner-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+nav {
+  background: #4B2E23;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  font-family: "Caeser Cyrillic", cursive;
+  font-size: 18px;
+  width: 100%;
+}
+.navigation .navigation-links {
+  flex-grow: 20;
+}
+.navigation .navigation-links ul {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+}
+.navigation .navigation-links ul a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 0px solid #fff;
+  transition: all 1s;
+}
+.navigation .navigation-links ul a:hover {
+  border-bottom: 5px solid #fff;
+}
+.navigation img {
+  width: 80px;
+  vertical-align: middle;
+  flex-grow: 1;
+}
+.navigation .lang {
+  flex-grow: 1;
+  color: white;
+}
+.navigation .lang a {
+  color: white;
+  text-decoration: none;
+  transition: all 1s;
+}
+.navigation .lang a:hover {
+  border-bottom: 5px solid #fff;
+}
+
+.ham4 {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.ham4 path {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #fff;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.ham4.active {
+  transform: rotate(45deg);
+}
+
+.ham4 .top {
+  stroke-dasharray: 40 121;
+}
+
+.ham4 .bottom {
+  stroke-dasharray: 40 121;
+}
+
+.ham4.active .top {
+  stroke-dashoffset: -68px;
+}
+
+.ham4.active .bottom {
+  stroke-dashoffset: -68px;
+}
+
+svg {
+  display: none;
+}
+
+.menu-adaptive {
+  display: none;
+}
+
+section {
+  background: #804E3B;
+}
+section .inner-wrapper .section-container {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Caesar Dressing";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 53px;
+  color: #fff;
+}
+section h1 {
+  text-align: center;
+}
+section .cities {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 55px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+section .cities .cityy {
+  color: #fff;
+  text-decoration: none;
+}
+section .cities .city {
+  width: 220px;
+  height: 220px;
+  cursor: pointer;
+  border-radius: 35px;
+  display: flex;
+  border-bottom: 20px;
+  align-items: end;
+  justify-content: center;
+  transition: all 1s;
+}
+section .cities .city h2 {
+  text-align: center;
+}
+section .city:hover {
+  box-shadow: 0px 14px 21px 0px rgba(255, 255, 255, 0.2);
+}
+section .city-1 {
+  background-image: url(../../assets/cities/city-1.png);
+}
+section .city-2 {
+  background-image: url(../../assets/cities/city-2.png);
+}
+section .city-3 {
+  background-image: url(../../assets/cities/city-3.png);
+}
+section .city-4 {
+  background-image: url(../../assets/cities/city-4.png);
+}
+section .city-5 {
+  background-image: url(../../assets/cities/city-5.png);
+}
+section .city-6 {
+  background-image: url(../../assets/cities/city-6.png);
+}
+section .city-7 {
+  background-image: url(../../assets/cities/city-7.png);
+}
+section .city-8 {
+  background-image: url(../../assets/cities/city-8.png);
+}
+section .city-9 {
+  background-image: url(../../assets/cities/city-9.png);
+}
+section .city-10 {
+  background-image: url(../../assets/cities/city-10.png);
+}
+section .city-11 {
+  background-image: url(../../assets/cities/city-11.png);
+}
+section .city-12 {
+  background-image: url(../../assets/cities/city-12.png);
+}
+section .city-13 {
+  background-image: url(../../assets/cities/city-13.png);
+}
+section .city-14 {
+  background-image: url(../../assets/cities/city-14.png);
+}
+section .city-15 {
+  background-image: url(../../assets/cities/city-15.png);
+}
+section .city-16 {
+  background-image: url(../../assets/cities/city-16.png);
+}
+section .city-17 {
+  background-image: url(../../assets/cities/city-17.png);
+}
+
+#popUp-close {
+  cursor: pointer;
+}
+
+.complexes-in-city {
+  box-shadow: 0px 14px 21px 0px rgba(255, 255, 255, 0.38);
+  position: absolute;
+  width: 750px;
+  font-size: 16px;
+  left: calc(50% - 375px);
+  border-bottom-left-radius: 19px;
+  border-bottom-right-radius: 19px;
+  border-radius: 19px;
+  top: 25%;
+  z-index: 1000;
+  margin: 0 auto;
+  transition: all 1s;
+}
+.complexes-in-city .header-of-memorial-complexes {
+  font-family: "Caesar Dressing";
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px 0 15px 30px;
+  font-style: normal;
+  font-weight: 400;
+  background-color: #4B2E23;
+  font-size: 2.1em;
+  line-height: 44px;
+  color: #fff;
+  border-top-left-radius: 19px;
+  border-top-right-radius: 19px;
+}
+.complexes-in-city .monuments {
+  height: 250px;
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #804E3B;
+  border-bottom-left-radius: 19px;
+  border-bottom-right-radius: 19px;
+  gap: 30px;
+  padding-bottom: 20px;
+  overflow-y: scroll;
+}
+.complexes-in-city .monuments a {
+  font-family: "Caesar Dressing";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4em;
+  line-height: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 1s;
+}
+.complexes-in-city .monuments a:hover {
+  border-bottom: 5px solid #fff;
+}
+
+.complexes-in-city.openPopUp {
+  opacity: 1;
+  display: block;
+  position: fixed;
+  height: 320px;
+}
+.complexes-in-city.openPopUp .monuments {
+  overflow-y: scroll;
+}
+
+footer {
+  background-color: #4B2E23;
+}
+footer .social-links {
+  display: flex;
+  padding-top: 25px;
+  align-items: center;
+  flex-direction: row;
+}
+footer .social-links a {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+footer .social-links .logo p {
+  display: inline;
+}
+footer .social-links .logo img {
+  width: 75px;
+  display: inline;
+  vertical-align: middle;
+  padding-right: 15px;
+}
+footer .social-links .social {
+  margin: 0 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+footer .social-links .social .facebook img {
+  width: 55px;
+}
+footer .social-links .social .instagram {
+  margin-top: 7.5px;
+}
+footer .social-links .social .instagram img {
+  width: 40px;
+}
+footer .social-links .phone-numbers {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 105px;
+}
+footer .social-links .phone-numbers a {
+  border-bottom: 0px solid #fff;
+  transition: all 1s;
+}
+footer .social-links .phone-numbers a:hover {
+  border-bottom: 5px solid #fff;
+}
+footer .social-links .location {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 24px;
+  color: #fff;
+}
+footer .partners {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+footer .partners div {
+  display: flex;
+  gap: 40px;
+}
+footer .partners a img {
+  height: 80px;
+  display: inline;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+@media (max-width: 1400px) {
+  section .cities {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 1200px) {
+  section .cities {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 1055px) {
+  section .cities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  section .complexes-in-city {
+    width: 500px;
+    left: calc(50% - 250px);
+    font-size: 12px;
+  }
+}
+@media (max-width: 725px) {
+  section .cities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  section .cities .city {
+    width: 200px;
+    height: 200px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  section .complexes-in-city {
+    width: 390px;
+    left: calc(50% - 195px);
+    top: 40%;
+    font-size: 11px;
+  }
+}
+@media (max-width: 470px) {
+  h1 {
+    font-size: 20px;
+  }
+  section .cities {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  section .complexes-in-city {
+    width: 300px;
+    left: calc(50% - 150px);
+    top: 35%;
+    font-size: 13px;
+  }
+  section .complexes-in-city .header-of-memorial-complexes {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  section .complexes-in-city .header-of-memorial-complexes p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 950px) {
+  footer .inner-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    justify-content: center;
+  }
+  footer .social-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  footer .social-links .location {
+    margin-right: 20px;
+  }
+  footer .social-links p {
+    font-size: 0.7rem;
+  }
+  footer .social-links .social {
+    display: flex;
+    flex-direction: row;
+  }
+  footer .social-links .phone-numbers {
+    margin: 0;
+  }
+  footer .social-links .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .social-links .logo a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .social-links .logo a p {
+    display: block;
+  }
+  footer .social-links .logo a img {
+    padding: 0;
+  }
+  footer .partners {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  footer .partners div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  footer .partners div a img {
+    display: inline;
+  }
+  footer .partners a img {
+    height: 80px;
+  }
+  footer .social-links .location {
+    margin-right: 0;
+  }
+}
+@media (max-width: 920px) {
+  svg {
+    display: block;
+    position: relative;
+    float: right;
+    z-index: 10011;
+  }
+  .navigation .navigation-links ul {
+    display: none;
+  }
+  .navigation .lang {
+    display: none;
+  }
+  .menu-adaptive {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    background-color: #4B2E23;
+    width: 350px;
+    height: 450px;
+    top: -450px;
+    right: 40px;
+    box-shadow: 4px 7px 17px 18px rgba(0, 0, 0, 0.3);
+    transition: all 1s;
+  }
+  .menu-adaptive ul {
+    padding-top: 100px;
+    padding-left: 20px;
+    margin: 0;
+  }
+  .menu-adaptive li {
+    list-style-type: none;
+    color: #fff;
+  }
+  .menu-adaptive a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 19px;
+    display: inline-block;
+    padding: 10px 0;
+  }
+  .header.open .menu-adaptive {
+    transform: translateY(100%);
+  }
+}
+@media (max-width: 700px) {
+  footer .social-links .location {
+    margin-right: 0;
+  }
+  footer .inner-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  footer .inner-wrapper .partners {
+    width: 300px;
+    margin: 0 auto;
+  }
+  footer .inner-wrapper .partners a .partner-4, footer .inner-wrapper .partners a .partner-1 {
+    height: auto;
+  }
+}
+@media (max-width: 500px) {
+  .menu-adaptive {
+    width: 200px;
+    height: 475px;
+    top: -535px;
+  }
+}/*# sourceMappingURL=style.css.map */

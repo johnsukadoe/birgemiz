@@ -1,0 +1,970 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Montserrat:wght@200;300;400;500;700;800;900&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+ul[class], ol[class] {
+  padding: 0;
+}
+
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class], ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: Caeser Cyrillic; /* Гарнитура шрифта */
+  src: url(../../assets/font/caesardressingcyrillic.otf); /* Путь к файлу со шрифтом */
+}
+html {
+  overflow-x: hidden;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+.inner-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.fullscreen-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header {
+  position: relative;
+  min-height: 100vh;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  font-family: "Caeser Cyrillic", cursive;
+  font-size: 18px;
+  width: 100%;
+}
+.navigation .navigation-links {
+  flex-grow: 20;
+}
+.navigation .navigation-links ul {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+}
+.navigation .navigation-links ul a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 0px solid #fff;
+  transition: all 1s;
+}
+.navigation .navigation-links ul a:hover {
+  border-bottom: 5px solid #fff;
+}
+.navigation img {
+  width: 80px;
+  vertical-align: middle;
+  flex-grow: 1;
+}
+.navigation .lang {
+  flex-grow: 1;
+  color: white;
+}
+.navigation .lang a {
+  color: white;
+  text-decoration: none;
+  transition: all 1s;
+}
+.navigation .lang a:hover {
+  border-bottom: 5px solid #fff;
+}
+
+section {
+  position: relative;
+}
+section h1 {
+  font-family: "Caesar Dressing";
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 29px;
+  background: #4B2E23;
+  color: #fff;
+  padding: 25px 0;
+  text-align: center;
+}
+section .the-best {
+  text-align: center;
+  background: #804E3B;
+}
+section .the-best h2 {
+  font-family: "Caesar Dressing";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 78px;
+  color: #fff;
+  margin-bottom: 60px;
+  padding-top: 30px;
+}
+section .the-best .the-best-places {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 115px;
+  padding-bottom: 60px;
+}
+section .the-best .the-best-places .cards {
+  box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  max-width: 210px;
+}
+section .the-best .the-best-places .cards img {
+  padding: 5px 5px 0 5px;
+}
+section .the-best .the-best-places .cards p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+}
+section .the-best .the-best-places .card-1 p, section .the-best .the-best-places .card-3 p {
+  padding: 12px 5px 5px 5px;
+}
+section .the-best .the-best-places .card-2 p {
+  padding: 12px 5px 30px 5px;
+}
+section .the-best .tooltip-1, section .the-best .tooltip-2, section .the-best .tooltip-3 {
+  position: absolute;
+  width: 300px;
+  box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
+  border-radius: 29px;
+  background: #804E3B;
+  display: none;
+  flex-direction: row;
+  -webkit-box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
+  transition: all 1s ease-in;
+}
+section .the-best .tooltip-1 .tooltip-1-text, section .the-best .tooltip-1 .tooltip-2-text, section .the-best .tooltip-1 .tooltip-3-text, section .the-best .tooltip-2 .tooltip-1-text, section .the-best .tooltip-2 .tooltip-2-text, section .the-best .tooltip-2 .tooltip-3-text, section .the-best .tooltip-3 .tooltip-1-text, section .the-best .tooltip-3 .tooltip-2-text, section .the-best .tooltip-3 .tooltip-3-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+section .the-best .tooltip-1 .tooltip-1-text h3, section .the-best .tooltip-1 .tooltip-2-text h3, section .the-best .tooltip-1 .tooltip-3-text h3, section .the-best .tooltip-2 .tooltip-1-text h3, section .the-best .tooltip-2 .tooltip-2-text h3, section .the-best .tooltip-2 .tooltip-3-text h3, section .the-best .tooltip-3 .tooltip-1-text h3, section .the-best .tooltip-3 .tooltip-2-text h3, section .the-best .tooltip-3 .tooltip-3-text h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #fff;
+  line-height: 1.5rem;
+  flex-grow: 1;
+  padding-top: 10px;
+}
+section .the-best .tooltip-1 .tooltip-1-text p, section .the-best .tooltip-1 .tooltip-2-text p, section .the-best .tooltip-1 .tooltip-3-text p, section .the-best .tooltip-2 .tooltip-1-text p, section .the-best .tooltip-2 .tooltip-2-text p, section .the-best .tooltip-2 .tooltip-3-text p, section .the-best .tooltip-3 .tooltip-1-text p, section .the-best .tooltip-3 .tooltip-2-text p, section .the-best .tooltip-3 .tooltip-3-text p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  line-height: 18px;
+  flex-grow: 10;
+  text-align: center;
+}
+section .the-best .tooltip-1 .tooltip-1-text a, section .the-best .tooltip-1 .tooltip-2-text a, section .the-best .tooltip-1 .tooltip-3-text a, section .the-best .tooltip-2 .tooltip-1-text a, section .the-best .tooltip-2 .tooltip-2-text a, section .the-best .tooltip-2 .tooltip-3-text a, section .the-best .tooltip-3 .tooltip-1-text a, section .the-best .tooltip-3 .tooltip-2-text a, section .the-best .tooltip-3 .tooltip-3-text a {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 15px;
+  color: #fff;
+  flex-grow: 1;
+}
+section .the-best .tooltip-1 {
+  pointer-events: none;
+}
+section .the-best .tooltip-2 {
+  pointer-events: none;
+}
+section .the-best .tooltip-3 {
+  pointer-events: none;
+}
+section .the-best .card-1:hover .tooltip-1 {
+  display: flex;
+  pointer-events: auto;
+  width: 530px;
+}
+section .the-best .card-2:hover .tooltip-2 {
+  display: flex;
+  pointer-events: auto;
+  width: 530px;
+  opacity: 1;
+}
+section .the-best .card-3:hover .tooltip-3 {
+  display: flex;
+  pointer-events: auto;
+  width: 530px;
+  opacity: 1;
+}
+section .mini-grants {
+  background: #804E3B;
+  padding-top: 60px;
+}
+section .mini-grants .mini-grants-bg {
+  background-image: url(../../assets/images/miniGrants.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  border-radius: 15px;
+  width: 1240px;
+  height: 565px;
+  box-shadow: 0px 7px 24px 0px rgba(255, 255, 255, 0.2);
+}
+section .mini-grants .mini-grants-bg .mini-grants-logo {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  justify-content: start;
+  align-items: start;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 20px;
+  gap: 200px;
+  color: #fff;
+}
+section .mini-grants .mini-grants-bg .mini-grants-logo div {
+  margin-top: 20px;
+  margin-left: 40px;
+}
+section .mini-grants .mini-grants-bg .mini-grants-logo img {
+  width: 100px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 15px;
+}
+section .mini-grants .mini-grants-bg .mini-grants-logo .mini-grants-main-text {
+  font-family: "Caesar Dressing";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 44px;
+  margin-top: 35px;
+}
+section .mini-grants .mini-grants-bg .mini-grants-logo p {
+  display: inline;
+}
+section .mini-grants .mini-grants-bg .mini-grants-text {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  max-width: 90%;
+  margin: 30px auto;
+  padding: 30px 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 18px;
+}
+section .mini-grants .mini-grants-bg .mini-grants-text a {
+  color: #fff;
+  font-family: "Caesar Dressing", cursive;
+}
+section .team {
+  background: #804E3B;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+section .team h3 {
+  font-family: "Caesar Dressing";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 78px;
+  color: #fff;
+  margin-bottom: 60px;
+  padding-top: 30px;
+}
+section .team .team-people {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding-bottom: 100px;
+}
+section .team .team-people .person {
+  border-radius: 39px;
+  background: linear-gradient(180deg, #4B2E23 0%, #804E3B 100%);
+  box-shadow: 0px 7px 24px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 14%;
+  height: auto;
+}
+section .team .team-people .person img {
+  position: absolute;
+  bottom: 165px;
+  width: auto;
+  background: linear-gradient(180deg, #4B2E23 0%, #804E3B 100%);
+  box-shadow: 0px 7px 24px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transition: all 1s;
+}
+section .team .team-people .person img:hover {
+  box-shadow: 0px 7px 24px 0px rgba(255, 255, 255, 0.3);
+  bottom: 170px;
+}
+section .team .team-people .person p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.7rem;
+  line-height: 15px;
+  color: #fff;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+section .team .team-people .person .person-name {
+  margin: 50px 25px 0 25px;
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 17px;
+  color: #fff;
+}
+
+footer {
+  background-color: #4B2E23;
+}
+footer .social-links {
+  display: flex;
+  padding-top: 25px;
+  align-items: center;
+  flex-direction: row;
+}
+footer .social-links a {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+footer .social-links .logo p {
+  display: inline;
+}
+footer .social-links .logo img {
+  width: 75px;
+  display: inline;
+  vertical-align: middle;
+  padding-right: 15px;
+}
+footer .social-links .social {
+  margin: 0 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+footer .social-links .social .facebook img {
+  width: 55px;
+}
+footer .social-links .social .instagram {
+  margin-top: 7.5px;
+}
+footer .social-links .social .instagram img {
+  width: 40px;
+}
+footer .social-links .phone-numbers {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 105px;
+}
+footer .social-links .phone-numbers a {
+  border-bottom: 0px solid #fff;
+  transition: all 1s;
+}
+footer .social-links .phone-numbers a:hover {
+  border-bottom: 5px solid #fff;
+}
+footer .social-links .location {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 24px;
+  color: #fff;
+}
+footer .partners {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+footer .partners div {
+  display: flex;
+  gap: 40px;
+}
+footer .partners a img {
+  height: 80px;
+  display: inline;
+}
+
+.ham4 {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.ham4 path {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #fff;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.ham4.active {
+  transform: rotate(45deg);
+}
+
+.ham4 .top {
+  stroke-dasharray: 40 121;
+}
+
+.ham4 .bottom {
+  stroke-dasharray: 40 121;
+}
+
+.ham4.active .top {
+  stroke-dashoffset: -68px;
+}
+
+.ham4.active .bottom {
+  stroke-dashoffset: -68px;
+}
+
+svg {
+  display: none;
+}
+
+.menu-adaptive {
+  display: none;
+}
+
+@media (max-width: 1480px) {
+  section .the-best .cards:hover .tooltip-1, section .the-best .cards:hover .tooltip-2, section .the-best .cards:hover .tooltip-3 {
+    width: 400px;
+  }
+  section .the-best .cards:hover .tooltip-1 img, section .the-best .cards:hover .tooltip-2 img, section .the-best .cards:hover .tooltip-3 img {
+    width: 200px;
+    padding-bottom: 10px;
+  }
+  section .the-best .cards:hover .tooltip-1 .tooltip-1-text h3, section .the-best .cards:hover .tooltip-1 .tooltip-2-text h3, section .the-best .cards:hover .tooltip-1 .tooltip-3-text h3, section .the-best .cards:hover .tooltip-2 .tooltip-1-text h3, section .the-best .cards:hover .tooltip-2 .tooltip-2-text h3, section .the-best .cards:hover .tooltip-2 .tooltip-3-text h3, section .the-best .cards:hover .tooltip-3 .tooltip-1-text h3, section .the-best .cards:hover .tooltip-3 .tooltip-2-text h3, section .the-best .cards:hover .tooltip-3 .tooltip-3-text h3 {
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+  section .the-best .cards:hover .tooltip-1 .tooltip-1-text p, section .the-best .cards:hover .tooltip-1 .tooltip-2-text p, section .the-best .cards:hover .tooltip-1 .tooltip-3-text p, section .the-best .cards:hover .tooltip-2 .tooltip-1-text p, section .the-best .cards:hover .tooltip-2 .tooltip-2-text p, section .the-best .cards:hover .tooltip-2 .tooltip-3-text p, section .the-best .cards:hover .tooltip-3 .tooltip-1-text p, section .the-best .cards:hover .tooltip-3 .tooltip-2-text p, section .the-best .cards:hover .tooltip-3 .tooltip-3-text p {
+    padding-right: 10px;
+    padding-top: 5px;
+  }
+  section .the-best .cards:hover .tooltip-1 .tooltip-1-text a, section .the-best .cards:hover .tooltip-1 .tooltip-2-text a, section .the-best .cards:hover .tooltip-1 .tooltip-3-text a, section .the-best .cards:hover .tooltip-2 .tooltip-1-text a, section .the-best .cards:hover .tooltip-2 .tooltip-2-text a, section .the-best .cards:hover .tooltip-2 .tooltip-3-text a, section .the-best .cards:hover .tooltip-3 .tooltip-1-text a, section .the-best .cards:hover .tooltip-3 .tooltip-2-text a, section .the-best .cards:hover .tooltip-3 .tooltip-3-text a {
+    padding-bottom: 10px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 1285px) {
+  section .the-best .cards:hover .tooltip-1, section .the-best .cards:hover .tooltip-2, section .the-best .cards:hover .tooltip-3 {
+    display: flex;
+    flex-direction: column;
+    top: 250px;
+    width: 300px;
+  }
+  section .the-best .card-1:hover .tooltip-1 {
+    left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .card-2:hover .tooltip-2 {
+    left: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .card-3:hover .tooltip-3 {
+    left: 760px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+}
+@media (max-width: 1060px) {
+  section .the-best .cards:hover .tooltip-1, section .the-best .cards:hover .tooltip-2, section .the-best .cards:hover .tooltip-3 {
+    display: flex;
+    flex-direction: column;
+    top: 250px;
+    width: 200px;
+  }
+  section .the-best .card-1:hover .tooltip-1 {
+    left: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .card-2:hover .tooltip-2 {
+    left: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .card-3:hover .tooltip-3 {
+    left: 670px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .the-best-places {
+    gap: 30px;
+  }
+}
+@media (max-width: 1340px) {
+  section .mini-grants .mini-grants-bg {
+    width: 900px;
+  }
+  section .mini-grants .mini-grants-bg .mini-grants-logo {
+    gap: 0px;
+  }
+}
+@media (max-width: 1050px) {
+  section .team .team-people {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0;
+  }
+  section .team .team-people .person {
+    width: 75%;
+  }
+  section .team .team-people .person img {
+    bottom: 335px;
+  }
+  section .team .team-people .person-5, section .team .team-people .person-6, section .team .team-people .person-7 {
+    margin-top: 50px;
+  }
+  section .team .team-people .person-5 img, section .team .team-people .person-6 img, section .team .team-people .person-7 img {
+    bottom: 170px;
+  }
+}
+@media (max-width: 950px) {
+  section .mini-grants .mini-grants-bg {
+    width: 700px;
+  }
+  section .mini-grants .mini-grants-bg .mini-grants-logo {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  section .mini-grants .mini-grants-bg .mini-grants-logo span {
+    width: 100%;
+    text-align: center;
+  }
+  section .mini-grants .mini-grants-bg .mini-grants-logo div {
+    display: none;
+  }
+  section .mini-grants .mini-grants-bg .mini-grants-text {
+    font-size: 0.7rem;
+  }
+  footer .inner-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    justify-content: center;
+  }
+  footer .social-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  footer .social-links .location {
+    margin-right: 20px;
+  }
+  footer .social-links p {
+    font-size: 0.7rem;
+  }
+  footer .social-links .social {
+    display: flex;
+    flex-direction: row;
+  }
+  footer .social-links .phone-numbers {
+    margin: 0;
+  }
+  footer .social-links .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .social-links .logo a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .social-links .logo a p {
+    display: block;
+  }
+  footer .social-links .logo a img {
+    padding: 0;
+  }
+  footer .partners {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  footer .partners div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  footer .partners div a img {
+    display: inline;
+  }
+  footer .partners a img {
+    height: 80px;
+  }
+}
+@media (max-width: 930px) {
+  html {
+    font-size: 14px;
+  }
+  section .the-best {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  section .the-best .cards:hover .tooltip-1, section .the-best .cards:hover .tooltip-2, section .the-best .cards:hover .tooltip-3 {
+    display: none;
+    flex-direction: column;
+    top: 250px;
+    width: 200px;
+  }
+  section .the-best .card-1:hover .tooltip-1 {
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .card-2:hover .tooltip-2 {
+    left: 50%;
+    top: 37%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .card-3:hover .tooltip-3 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .cards:active .tooltip-1, section .the-best .cards:active .tooltip-2, section .the-best .cards:active .tooltip-3 {
+    display: flex;
+    flex-direction: column;
+    top: 250px;
+    width: 200px;
+  }
+  section .the-best .card-1:active .tooltip-1 {
+    left: 50%;
+    top: 17%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .card-2:active .tooltip-2 {
+    left: 50%;
+    top: 26%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .card-3:active .tooltip-3 {
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  section .the-best .the-best-places {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 60px;
+    gap: 50px;
+  }
+  section .the-best .the-best-places .cards {
+    width: 500px;
+  }
+  section .the-best .the-best-places .cards img {
+    width: 400px;
+  }
+  section .the-best .the-best-places .cards p {
+    font-size: 16px;
+  }
+  footer .social-links .location {
+    margin-right: 0;
+  }
+}
+@media (max-width: 860px) {
+  svg {
+    display: block;
+    position: relative;
+    float: right;
+    z-index: 10011;
+  }
+  .navigation .navigation-links ul {
+    display: none;
+  }
+  .navigation .lang {
+    display: none;
+  }
+  .menu-adaptive {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    background-color: #4B2E23;
+    width: 350px;
+    height: 450px;
+    top: -450px;
+    right: 40px;
+    box-shadow: 4px 7px 17px 18px rgba(0, 0, 0, 0.3);
+    transition: all 1s;
+  }
+  .menu-adaptive ul {
+    padding-top: 100px;
+    padding-left: 20px;
+    margin: 0;
+  }
+  .menu-adaptive li {
+    list-style-type: none;
+    color: #fff;
+  }
+  .menu-adaptive a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 19px;
+    display: inline-block;
+    padding: 10px 0;
+  }
+  .header.open .menu-adaptive {
+    transform: translateY(100%);
+  }
+}
+@media (max-width: 700px) {
+  section .mini-grants .mini-grants-bg {
+    background-image: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    justify-content: space-around;
+  }
+  section .mini-grants .mini-grants-bg .mini-grants-logo .mini-grants-main-text {
+    margin: 0;
+  }
+  section .mini-grants .mini-grants-bg .mini-grants-text {
+    margin: 0;
+    font-size: 13px;
+  }
+  section .team .team-people {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+  }
+  section .team .team-people .person img {
+    bottom: 20px;
+  }
+  section .team .team-people .person-1 img, section .team .team-people .person-2 img, section .team .team-people .person-3 img {
+    bottom: 500px;
+  }
+  section .team .team-people .person-1 img:hover, section .team .team-people .person-2 img:hover, section .team .team-people .person-3 img:hover {
+    bottom: 500px;
+    box-shadow: none;
+  }
+  section .team .team-people .person-4 img, section .team .team-people .person-5 img, section .team .team-people .person-6 img {
+    bottom: 335px;
+  }
+  section .team .team-people .person-4 img:hover, section .team .team-people .person-5 img:hover, section .team .team-people .person-6 img:hover {
+    bottom: 335px;
+    box-shadow: none;
+  }
+  section .team .team-people .person-4 {
+    height: 114px;
+    margin-top: 50px;
+  }
+  section .team .team-people .person-7 img {
+    bottom: 170px;
+  }
+  section .team .team-people .person-7 img:hover {
+    bottom: 170px;
+    box-shadow: none;
+  }
+}
+@media (max-width: 700px) {
+  section .mini-grants {
+    padding-top: 280px;
+    padding-bottom: 200px;
+  }
+  section .mini-grants .mini-grants-bg {
+    width: 300px;
+  }
+  section .team .team-people {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  section .team .team-people .person {
+    width: 100%;
+  }
+  section .team .team-people .person-1 img {
+    bottom: 1035px;
+  }
+  section .team .team-people .person-2 img {
+    bottom: 890px;
+  }
+  section .team .team-people .person-3 img {
+    bottom: 745px;
+  }
+  section .team .team-people .person-4, section .team .team-people .person-5, section .team .team-people .person-6, section .team .team-people .person-7 {
+    margin-top: 0;
+  }
+  section .team .team-people .person-4 {
+    height: 97px;
+  }
+  section .team .team-people .person-4 img {
+    bottom: 595px;
+  }
+  section .team .team-people .person-5 img {
+    bottom: 445px;
+  }
+  section .team .team-people .person-6 img {
+    bottom: 300px;
+  }
+  section .team .team-people .person-7 img {
+    bottom: 155px;
+  }
+  footer .inner-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  footer .inner-wrapper .partners {
+    width: 300px;
+    margin: 0 auto;
+  }
+  footer .inner-wrapper .partners a .partner-4, footer .inner-wrapper .partners a .partner-1 {
+    height: auto;
+  }
+  .menu-adaptive {
+    width: 200px;
+    height: 475px;
+    top: -535px;
+  }
+}/*# sourceMappingURL=style.css.map */

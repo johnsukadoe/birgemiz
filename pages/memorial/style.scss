@@ -1,0 +1,370 @@
+$caesar-cyrillic: 'Caeser Cyrillic', cursive;
+$montserrat: 'Montserrat', cursive;
+$caesar-eng: 'Caesar Dressing', cursive;
+$font-size:18px;
+@import "nullstyle";
+@import "fonts";
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+.inner-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+nav{
+    background: #4B2E23;
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    font-family: $caesar-cyrillic;
+    font-size: $font-size;
+    width:100%;
+    .navigation-links {
+        flex-grow: 20;
+        ul{
+            display: flex;
+            list-style-type: none;
+            gap:20px;
+            a{
+                color:white;
+                text-decoration: none;
+                border-bottom: 0px solid #fff;
+                transition: all 1s;
+            }
+            a:hover{
+                border-bottom: 5px solid #fff;
+                
+            }
+        }
+    }
+    img{
+        width: 80px;
+        vertical-align: middle;
+        flex-grow: 1;
+    }
+    .lang{
+        flex-grow: 1;
+        color:white;
+        a{
+            color:white;
+            text-decoration: none;
+            transition: all 1s;
+        }
+        a:hover{
+            border-bottom: 5px solid #fff;
+            
+        }
+    }
+}
+.ham4 {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    user-select: none;
+}
+.ham4 path{
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #fff;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+}
+.ham4.active {
+    transform: rotate(45deg);
+}
+.ham4 .top {
+    stroke-dasharray: 40 121;
+}
+.ham4 .bottom {
+    stroke-dasharray: 40 121;
+}
+.ham4.active .top {
+    stroke-dashoffset: -68px;
+}
+.ham4.active .bottom {
+    stroke-dashoffset: -68px;
+}
+svg{
+    display: none;
+}
+.menu-adaptive{
+    display: none;
+}
+
+section{
+    background: #804E3B;
+    .inner-wrapper{
+        .section-container{    
+        padding-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Caesar Dressing';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 53px;
+        color:#fff;
+    }
+    }
+    h1{
+        text-align: center;
+    }
+    .cities{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap:55px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        .cityy{
+            color:#fff;
+            text-decoration: none;
+        }
+        .city{
+            width: 220px;
+            height: 220px;
+            cursor: pointer;
+            border-radius: 35px;
+            display: flex;
+            border-bottom: 20px;
+            align-items: end;
+            justify-content: center;
+            transition: all 1s;
+                h2{
+                    text-align: center;
+                }
+            }
+        }
+        .city:hover{
+            -webkit-box-shadow: 0px 14px 21px 0px rgba(255, 255, 255, 0.2);
+            -moz-box-shadow: 0px 14px 21px 0px rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 14px 21px 0px rgba(255, 255, 255, 0.2);
+        }
+        .city-1{
+            background-image: url(../../assets/cities/city-1.png);
+        }
+        .city-2{
+            background-image: url(../../assets/cities/city-2.png);
+        }
+        .city-3{
+            background-image: url(../../assets/cities/city-3.png);
+        }
+        .city-4{
+            background-image: url(../../assets/cities/city-4.png);
+        }
+        .city-5{
+            background-image: url(../../assets/cities/city-5.png);
+        }
+        .city-6{
+            background-image: url(../../assets/cities/city-6.png);
+        }
+        .city-7{
+            background-image: url(../../assets/cities/city-7.png);
+        }
+        .city-8{
+            background-image: url(../../assets/cities/city-8.png);
+        }
+        .city-9{
+            background-image: url(../../assets/cities/city-9.png);
+        }
+        .city-10{
+            background-image: url(../../assets/cities/city-10.png);
+        }
+        .city-11{
+            background-image: url(../../assets/cities/city-11.png);
+        }
+        .city-12{
+            background-image: url(../../assets/cities/city-12.png);
+        }
+        .city-13{
+            background-image: url(../../assets/cities/city-13.png);
+        }
+        .city-14{
+            background-image: url(../../assets/cities/city-14.png);
+        }
+        .city-15{
+            background-image: url(../../assets/cities/city-15.png);
+        }
+        .city-16{
+            background-image: url(../../assets/cities/city-16.png);
+        }
+        .city-17{
+            background-image: url(../../assets/cities/city-17.png);
+        }
+
+    }
+#popUp-close{
+    cursor: pointer;
+}
+    .complexes-in-city{
+        -webkit-box-shadow: 0px 14px 21px 0px rgba(255, 255, 255, 0.38);
+        -moz-box-shadow: 0px 14px 21px 0px rgba(255, 255, 255, 0.38);
+        box-shadow: 0px 14px 21px 0px rgba(255, 255, 255, 0.38);
+        position: absolute;
+        width: 750px;
+        font-size: 16px;
+        left: calc(50% - (750px / 2));
+        border-bottom-left-radius: 19px;
+        border-bottom-right-radius: 19px;
+        border-radius: 19px;
+        top: 25%;
+        z-index: 1000;
+        margin: 0 auto;
+        transition: all 1s;
+        .header-of-memorial-complexes{
+            font-family: 'Caesar Dressing';
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding:15px 0 15px 30px;
+            font-style: normal;
+            font-weight: 400;
+            background-color: #4B2E23;
+            font-size: 2.1em;
+            line-height: 44px;
+            color:#fff;
+            border-top-left-radius: 19px;
+            border-top-right-radius: 19px;
+        }
+        .monuments{
+            height: 250px;
+            padding:15px 30px;
+            display: flex;
+            flex-direction: column;
+            background-color: #804E3B;
+            border-bottom-left-radius: 19px;
+            border-bottom-right-radius: 19px;
+            gap:30px;
+            padding-bottom: 20px;
+            overflow-y: scroll;
+                a{
+                    font-family: 'Caesar Dressing';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 1.4em;
+                    line-height: 20px;
+                    color:#fff;
+                    text-decoration: none;
+                    transition: all 1s;
+                }
+                a:hover{
+                    border-bottom: 5px solid #fff;
+                }
+        }
+    }
+.complexes-in-city.openPopUp{
+    opacity: 1;
+    display: block;
+    position: fixed;
+    height: 320px;
+    .monuments{
+        overflow-y: scroll;
+    }
+}
+
+footer{
+    background-color: #4B2E23;
+    .social-links{
+        display: flex;
+        padding-top: 25px;
+        align-items: center;
+        flex-direction: row;
+        a{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 20px;
+            color:#fff;
+            text-decoration: none;
+        }
+
+        .logo{
+            p{
+                display: inline;
+            }
+            img{
+                width:75px;
+                display: inline;
+                vertical-align: middle;
+                padding-right: 15px;
+            }
+        }
+        .social{
+            margin:0 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap:10px;
+            .facebook{
+                img{
+                    width: 55px;
+                }
+            }
+            .instagram{
+                margin-top: 7.5px;
+                img{
+                    width: 40px;
+                }
+            }   
+        }
+
+        .phone-numbers{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-right: 105px;
+            a{
+                border-bottom: 0px solid #fff;
+                transition: all 1s;
+            }
+            a:hover{
+                border-bottom: 5px solid #fff;
+            }
+        }
+        .location{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.3rem;
+            line-height: 24px;
+            color:#fff;
+        }
+    }
+    .partners{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap:40px;
+        padding-top: 30px;
+        padding-bottom: 40px;
+        div{
+            display: flex;
+            gap:40px;
+        }
+        a{
+            img{
+                height:80px;
+                display: inline;
+            }
+        }
+    }
+}
+
+.modal{
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+@import "adaptive";
