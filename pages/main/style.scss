@@ -149,11 +149,20 @@ section{
             box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
             border-radius: 29px;
             background: #804E3B;
+<<<<<<< HEAD
             display: none;
             flex-direction: row;
             -webkit-box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
             -moz-box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
             transition: all 1s ease-in;
+=======
+            opacity: 0;
+            display: flex;
+            flex-direction: row;
+            -webkit-box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
+            -moz-box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
+            transition: opacity 0.2s ease;
+>>>>>>> origin/main
             .tooltip-1-text, .tooltip-2-text, .tooltip-3-text{
                 display: flex;
                 flex-direction: column;
@@ -200,11 +209,16 @@ section{
             pointer-events: none;
         }
         .card-1:hover .tooltip-1{
+<<<<<<< HEAD
             display: flex;
+=======
+            opacity: 1;
+>>>>>>> origin/main
             pointer-events: auto;
             width: 530px;
         }
         .card-2:hover .tooltip-2{
+<<<<<<< HEAD
             display: flex;
             pointer-events: auto;
             width: 530px;
@@ -215,6 +229,16 @@ section{
             pointer-events: auto;
             width: 530px;
             opacity: 1;
+=======
+            opacity: 1;
+            pointer-events: auto;
+            width: 530px;
+        }
+        .card-3:hover .tooltip-3{
+            opacity: 1;
+            pointer-events: auto;
+            width: 530px;
+>>>>>>> origin/main
         }
     }
     .mini-grants{

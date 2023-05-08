@@ -194,11 +194,20 @@ section .the-best .tooltip-1, section .the-best .tooltip-2, section .the-best .t
   box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
   border-radius: 29px;
   background: #804E3B;
+<<<<<<< HEAD
   display: none;
   flex-direction: row;
   -webkit-box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
   -moz-box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
   transition: all 1s ease-in;
+=======
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: 4px 4px 21px 15px rgba(255, 255, 255, 0.2);
+  transition: opacity 0.2s ease;
+>>>>>>> origin/main
 }
 section .the-best .tooltip-1 .tooltip-1-text, section .the-best .tooltip-1 .tooltip-2-text, section .the-best .tooltip-1 .tooltip-3-text, section .the-best .tooltip-2 .tooltip-1-text, section .the-best .tooltip-2 .tooltip-2-text, section .the-best .tooltip-2 .tooltip-3-text, section .the-best .tooltip-3 .tooltip-1-text, section .the-best .tooltip-3 .tooltip-2-text, section .the-best .tooltip-3 .tooltip-3-text {
   display: flex;
@@ -245,11 +254,16 @@ section .the-best .tooltip-3 {
   pointer-events: none;
 }
 section .the-best .card-1:hover .tooltip-1 {
+<<<<<<< HEAD
   display: flex;
+=======
+  opacity: 1;
+>>>>>>> origin/main
   pointer-events: auto;
   width: 530px;
 }
 section .the-best .card-2:hover .tooltip-2 {
+<<<<<<< HEAD
   display: flex;
   pointer-events: auto;
   width: 530px;
@@ -260,6 +274,16 @@ section .the-best .card-3:hover .tooltip-3 {
   pointer-events: auto;
   width: 530px;
   opacity: 1;
+=======
+  opacity: 1;
+  pointer-events: auto;
+  width: 530px;
+}
+section .the-best .card-3:hover .tooltip-3 {
+  opacity: 1;
+  pointer-events: auto;
+  width: 530px;
+>>>>>>> origin/main
 }
 section .mini-grants {
   background: #804E3B;
@@ -831,26 +855,43 @@ svg {
     flex-direction: row;
     background-color: #4B2E23;
     width: 350px;
+<<<<<<< HEAD
     height: 450px;
     top: -450px;
+=======
+    height: 360px;
+    top: -400px;
+>>>>>>> origin/main
     right: 40px;
     box-shadow: 4px 7px 17px 18px rgba(0, 0, 0, 0.3);
     transition: all 1s;
   }
   .menu-adaptive ul {
+<<<<<<< HEAD
     padding-top: 100px;
     padding-left: 20px;
+=======
+    padding-top: 80px;
+>>>>>>> origin/main
     margin: 0;
   }
   .menu-adaptive li {
     list-style-type: none;
+<<<<<<< HEAD
     color: #fff;
+=======
+>>>>>>> origin/main
   }
   .menu-adaptive a {
     color: #fff;
     text-decoration: none;
+<<<<<<< HEAD
     font-size: 19px;
     display: inline-block;
+=======
+    font-size: 21px;
+    display: block;
+>>>>>>> origin/main
     padding: 10px 0;
   }
   .header.open .menu-adaptive {
@@ -964,7 +1005,12 @@ svg {
   }
   .menu-adaptive {
     width: 200px;
+<<<<<<< HEAD
     height: 475px;
     top: -535px;
+=======
+    height: 400px;
+    top: -460px;
+>>>>>>> origin/main
   }
 }/*# sourceMappingURL=style.css.map */
